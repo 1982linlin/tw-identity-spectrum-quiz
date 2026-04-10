@@ -22,7 +22,8 @@ function renderMessage(title, body) {
 }
 
 function renderSummary(summary) {
-  const rows = summary.items || [];
+  const rows = (summary.items || []).filter((item) => item.result_key !== "test-ping");
+  const total = rows.reduce((sum, item) => sum + Number(item.count || 0), 0);
   statsApp.innerHTML = `
     <div class="nav">Jianghu Identity Scroll</div>
     <div class="eyebrow">结果分布页</div>
@@ -31,7 +32,7 @@ function renderSummary(summary) {
     <div class="grid">
       <div class="stat-card">
         <div class="stat-label">总提交数</div>
-        <div class="stat-value">${summary.total || 0}</div>
+        <div class="stat-value">${total}</div>
       </div>
       <div class="stat-card">
         <div class="stat-label">最近刷新</div>
