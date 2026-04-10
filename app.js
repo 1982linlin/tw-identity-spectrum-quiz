@@ -133,16 +133,16 @@ const questions = [
 ];
 
 const results = [
-  { key: "rapid-independence", title: "孤锋离岛客", subtitle: "急独向", rank: "先天境", range: [-60, -43], vibe: "你最看重的是主体性与边界感，出手直接，不太接受模糊地带。", keywords: ["边界优先", "表达直接", "不想暧昧"], color: "#b85b4c" },
-  { key: "slow-independence", title: "分途潜行者", subtitle: "慢独向", rank: "游侠境", range: [-42, -31], vibe: "你方向上偏向分离，但打法更讲现实节奏，倾向慢推而不是硬撞。", keywords: ["方向清晰", "节奏谨慎", "现实主义"], color: "#c47a4e" },
-  { key: "fujian", title: "海峡望潮客", subtitle: "福建文化向", rank: "剑客境", range: [-30, -19], vibe: "你对闽南与海峡文化连接有感，但不会自动把文化共鸣升级成政治结论。", keywords: ["地域连接", "文化有感", "政治分流"], color: "#cb9556" },
-  { key: "chinese-person", title: "中州行旅人", subtitle: "中国认同向", rank: "少侠境", range: [-18, -7], vibe: "你能接受更大范围的身份标签，同时仍保留很强的现实判断和场景感。", keywords: ["场景切换", "复合认同", "不过度绑定"], color: "#d5b36b" },
-  { key: "zhonghua-children", title: "炎黄游侠", subtitle: "中华文化向", rank: "堂主境", range: [-6, 5], vibe: "你更像中间地带的观察者，对中华文化有认同，也很看重现实生活与制度体验。", keywords: ["中间地带", "文化共鸣", "务实观察"], color: "#bca15a" },
-  { key: "huaxia-children", title: "龙吟传灯人", subtitle: "华夏文化增强向", rank: "护法境", range: [6, 16], vibe: "你把共同历史与文化连续性看得更重，倾向把身份理解成一条长线。", keywords: ["历史连续", "文化长线", "认同增强"], color: "#7e9261" },
-  { key: "culture-unity", title: "文脉守门人", subtitle: "文化统一向", rank: "长老境", range: [17, 27], vibe: "你未必迷恋口号，但很在意文化、传统与共同叙事带来的整合感。", keywords: ["文化导向", "传统连接", "整合感强"], color: "#4d8d6f" },
-  { key: "modern-unity", title: "经世合流派", subtitle: "务实统一向", rank: "掌门境", range: [28, 38], vibe: "你更在意能不能用现代制度语言，重写连接与统一的现实想象。", keywords: ["方案导向", "制度现代", "升级叙事"], color: "#2c7d76" },
-  { key: "ultimate-unity", title: "山河归一派", subtitle: "强统一向", rank: "宗师境", range: [39, 49], vibe: "你对统一倾向已经相当明确，认为长线看这是一条更完整、更稳定的路径。", keywords: ["目标明确", "长期视角", "整合优先"], color: "#2d5f87" },
-  { key: "fervent-unity", title: "天罡盟主", subtitle: "高度统一向", rank: "盟主境", range: [50, 60], vibe: "你对统一叙事高度认同，表达意愿强，也愿意主动为这套观点辩护。", keywords: ["高认同", "表达强烈", "立场鲜明"], color: "#234778" }
+  { key: "rapid-independence", title: "孤锋离岛客", subtitle: "急独向", rank: "先天境", range: [-60, -43], vibe: "你最看重的是主体性与边界感，出手直接，不太接受模糊地带。", keywords: ["边界优先", "表达直接", "不想暧昧"], color: "#b85b4c", avatar: "./avatars/rapid-independence.png" },
+  { key: "slow-independence", title: "分途潜行者", subtitle: "慢独向", rank: "游侠境", range: [-42, -31], vibe: "你方向上偏向分离，但打法更讲现实节奏，倾向慢推而不是硬撞。", keywords: ["方向清晰", "节奏谨慎", "现实主义"], color: "#c47a4e", avatar: "./avatars/slow-independence.png" },
+  { key: "fujian", title: "海峡望潮客", subtitle: "福建文化向", rank: "剑客境", range: [-30, -19], vibe: "你对闽南与海峡文化连接有感，但不会自动把文化共鸣升级成政治结论。", keywords: ["地域连接", "文化有感", "政治分流"], color: "#cb9556", avatar: "./avatars/fujian.png" },
+  { key: "chinese-person", title: "中州行旅人", subtitle: "中国认同向", rank: "少侠境", range: [-18, -7], vibe: "你能接受更大范围的身份标签，同时仍保留很强的现实判断和场景感。", keywords: ["场景切换", "复合认同", "不过度绑定"], color: "#d5b36b", avatar: "./avatars/chinese-person.png" },
+  { key: "zhonghua-children", title: "炎黄游侠", subtitle: "中华文化向", rank: "堂主境", range: [-6, 5], vibe: "你更像中间地带的观察者，对中华文化有认同，也很看重现实生活与制度体验。", keywords: ["中间地带", "文化共鸣", "务实观察"], color: "#bca15a", avatar: "./avatars/zhonghua-children.png" },
+  { key: "huaxia-children", title: "龙吟传灯人", subtitle: "华夏文化增强向", rank: "护法境", range: [6, 16], vibe: "你把共同历史与文化连续性看得更重，倾向把身份理解成一条长线。", keywords: ["历史连续", "文化长线", "认同增强"], color: "#7e9261", avatar: "./avatars/huaxia-children.png" },
+  { key: "culture-unity", title: "文脉守门人", subtitle: "文化统一向", rank: "长老境", range: [17, 27], vibe: "你未必迷恋口号，但很在意文化、传统与共同叙事带来的整合感。", keywords: ["文化导向", "传统连接", "整合感强"], color: "#4d8d6f", avatar: "./avatars/culture-unity.png" },
+  { key: "modern-unity", title: "经世合流派", subtitle: "务实统一向", rank: "掌门境", range: [28, 38], vibe: "你更在意能不能用现代制度语言，重写连接与统一的现实想象。", keywords: ["方案导向", "制度现代", "升级叙事"], color: "#2c7d76", avatar: "./avatars/modern-unity.png" },
+  { key: "ultimate-unity", title: "山河归一派", subtitle: "强统一向", rank: "宗师境", range: [39, 49], vibe: "你对统一倾向已经相当明确，认为长线看这是一条更完整、更稳定的路径。", keywords: ["目标明确", "长期视角", "整合优先"], color: "#2d5f87", avatar: "./avatars/ultimate-unity.png" },
+  { key: "fervent-unity", title: "天罡盟主", subtitle: "高度统一向", rank: "盟主境", range: [50, 60], vibe: "你对统一叙事高度认同，表达意愿强，也愿意主动为这套观点辩护。", keywords: ["高认同", "表达强烈", "立场鲜明"], color: "#234778", avatar: "./avatars/fervent-unity.png" }
 ];
 
 const runtimeConfig = window.QUIZ_CONFIG || {};
@@ -371,9 +371,16 @@ function renderResult() {
         <div class="result-pill" style="background:${result.color}">${escapeHtml(result.subtitle)}</div>
         <div class="result-score">${escapeHtml(result.rank)} · 总分 ${totalScore}</div>
       </div>
-      <div class="poster-title">你的江湖称号已揭晓</div>
-      <div class="result-name">${escapeHtml(result.title)}</div>
-      <div class="result-subtitle">${escapeHtml(result.subtitle)} · 看得懂版结果</div>
+      <div class="result-hero">
+        <div class="result-avatar-shell" style="border-color:${result.color}">
+          <img class="result-avatar" src="${escapeHtml(result.avatar)}" alt="${escapeHtml(result.title)} 角色头像" />
+        </div>
+        <div class="result-hero-copy">
+          <div class="poster-title">你的江湖称号已揭晓</div>
+          <div class="result-name">${escapeHtml(result.title)}</div>
+          <div class="result-subtitle">${escapeHtml(result.subtitle)} · 看得懂版结果</div>
+        </div>
+      </div>
       <div class="result-vibe">${escapeHtml(result.vibe)}</div>
       <div class="result-bar">
         <div class="result-bar__label">门派倾向值</div>
@@ -399,10 +406,6 @@ function renderResult() {
     <section class="quote-card">
       <div class="quote-card__label">一句话江湖批注</div>
       <div class="quote-card__text">${escapeHtml(resultMeta.vibeLine)}</div>
-    </section>
-    <section class="result-note">
-      <div class="glass-title">怎么看这张名帖</div>
-      <div class="result-note__text">上面的大称号是武侠包装层，方便截图分享；下面的“${escapeHtml(result.subtitle)}”才是看得懂版结果。也就是说，这张图既有江湖气，也不会让人看不明白你大概落在哪一档。</div>
     </section>
     <div class="footer-actions">
       <button class="btn" data-action="share">复制分享文案</button>
