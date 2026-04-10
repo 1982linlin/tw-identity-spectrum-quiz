@@ -133,107 +133,21 @@ const questions = [
 ];
 
 const results = [
-  {
-    key: "rapid-independence",
-    title: "孤锋离岛客",
-    subtitle: "急独向",
-    rank: "先天境",
-    range: [-60, -43],
-    vibe: "你最看重的是主体性与边界感，出手直接，不太接受模糊地带。",
-    keywords: ["边界优先", "表达直接", "不想暧昧"],
-    color: "#b85b4c"
-  },
-  {
-    key: "slow-independence",
-    title: "分途潜行者",
-    subtitle: "慢独向",
-    rank: "游侠境",
-    range: [-42, -31],
-    vibe: "你方向上偏向分离，但打法更讲现实节奏，倾向慢推而不是硬撞。",
-    keywords: ["方向清晰", "节奏谨慎", "现实主义"],
-    color: "#c47a4e"
-  },
-  {
-    key: "fujian",
-    title: "海峡望潮客",
-    subtitle: "福建文化向",
-    rank: "剑客境",
-    range: [-30, -19],
-    vibe: "你对闽南与海峡文化连接有感，但不会自动把文化共鸣升级成政治结论。",
-    keywords: ["地域连接", "文化有感", "政治分流"],
-    color: "#cb9556"
-  },
-  {
-    key: "chinese-person",
-    title: "中州行旅人",
-    subtitle: "中国认同向",
-    rank: "少侠境",
-    range: [-18, -7],
-    vibe: "你能接受更大范围的身份标签，同时仍保留很强的现实判断和场景感。",
-    keywords: ["场景切换", "复合认同", "不过度绑定"],
-    color: "#d5b36b"
-  },
-  {
-    key: "zhonghua-children",
-    title: "炎黄游侠",
-    subtitle: "中华文化向",
-    rank: "堂主境",
-    range: [-6, 5],
-    vibe: "你更像中间地带的观察者，对中华文化有认同，也很看重现实生活与制度体验。",
-    keywords: ["中间地带", "文化共鸣", "务实观察"],
-    color: "#bca15a"
-  },
-  {
-    key: "huaxia-children",
-    title: "龙吟传灯人",
-    subtitle: "华夏文化增强向",
-    rank: "护法境",
-    range: [6, 16],
-    vibe: "你把共同历史与文化连续性看得更重，倾向把身份理解成一条长线。",
-    keywords: ["历史连续", "文化长线", "认同增强"],
-    color: "#7e9261"
-  },
-  {
-    key: "culture-unity",
-    title: "文脉守门人",
-    subtitle: "文化统一向",
-    rank: "长老境",
-    range: [17, 27],
-    vibe: "你未必迷恋口号，但很在意文化、传统与共同叙事带来的整合感。",
-    keywords: ["文化导向", "传统连接", "整合感强"],
-    color: "#4d8d6f"
-  },
-  {
-    key: "modern-unity",
-    title: "经世合流派",
-    subtitle: "务实统一向",
-    rank: "掌门境",
-    range: [28, 38],
-    vibe: "你更在意能不能用现代制度语言，重写连接与统一的现实想象。",
-    keywords: ["方案导向", "制度现代", "升级叙事"],
-    color: "#2c7d76"
-  },
-  {
-    key: "ultimate-unity",
-    title: "山河归一派",
-    subtitle: "强统一向",
-    rank: "宗师境",
-    range: [39, 49],
-    vibe: "你对统一倾向已经相当明确，认为长线看这是一条更完整、更稳定的路径。",
-    keywords: ["目标明确", "长期视角", "整合优先"],
-    color: "#2d5f87"
-  },
-  {
-    key: "fervent-unity",
-    title: "天罡盟主",
-    subtitle: "高度统一向",
-    rank: "盟主境",
-    range: [50, 60],
-    vibe: "你对统一叙事高度认同，表达意愿强，也愿意主动为这套观点辩护。",
-    keywords: ["高认同", "表达强烈", "立场鲜明"],
-    color: "#234778"
-  }
+  { key: "rapid-independence", title: "孤锋离岛客", subtitle: "急独向", rank: "先天境", range: [-60, -43], vibe: "你最看重的是主体性与边界感，出手直接，不太接受模糊地带。", keywords: ["边界优先", "表达直接", "不想暧昧"], color: "#b85b4c" },
+  { key: "slow-independence", title: "分途潜行者", subtitle: "慢独向", rank: "游侠境", range: [-42, -31], vibe: "你方向上偏向分离，但打法更讲现实节奏，倾向慢推而不是硬撞。", keywords: ["方向清晰", "节奏谨慎", "现实主义"], color: "#c47a4e" },
+  { key: "fujian", title: "海峡望潮客", subtitle: "福建文化向", rank: "剑客境", range: [-30, -19], vibe: "你对闽南与海峡文化连接有感，但不会自动把文化共鸣升级成政治结论。", keywords: ["地域连接", "文化有感", "政治分流"], color: "#cb9556" },
+  { key: "chinese-person", title: "中州行旅人", subtitle: "中国认同向", rank: "少侠境", range: [-18, -7], vibe: "你能接受更大范围的身份标签，同时仍保留很强的现实判断和场景感。", keywords: ["场景切换", "复合认同", "不过度绑定"], color: "#d5b36b" },
+  { key: "zhonghua-children", title: "炎黄游侠", subtitle: "中华文化向", rank: "堂主境", range: [-6, 5], vibe: "你更像中间地带的观察者，对中华文化有认同，也很看重现实生活与制度体验。", keywords: ["中间地带", "文化共鸣", "务实观察"], color: "#bca15a" },
+  { key: "huaxia-children", title: "龙吟传灯人", subtitle: "华夏文化增强向", rank: "护法境", range: [6, 16], vibe: "你把共同历史与文化连续性看得更重，倾向把身份理解成一条长线。", keywords: ["历史连续", "文化长线", "认同增强"], color: "#7e9261" },
+  { key: "culture-unity", title: "文脉守门人", subtitle: "文化统一向", rank: "长老境", range: [17, 27], vibe: "你未必迷恋口号，但很在意文化、传统与共同叙事带来的整合感。", keywords: ["文化导向", "传统连接", "整合感强"], color: "#4d8d6f" },
+  { key: "modern-unity", title: "经世合流派", subtitle: "务实统一向", rank: "掌门境", range: [28, 38], vibe: "你更在意能不能用现代制度语言，重写连接与统一的现实想象。", keywords: ["方案导向", "制度现代", "升级叙事"], color: "#2c7d76" },
+  { key: "ultimate-unity", title: "山河归一派", subtitle: "强统一向", rank: "宗师境", range: [39, 49], vibe: "你对统一倾向已经相当明确，认为长线看这是一条更完整、更稳定的路径。", keywords: ["目标明确", "长期视角", "整合优先"], color: "#2d5f87" },
+  { key: "fervent-unity", title: "天罡盟主", subtitle: "高度统一向", rank: "盟主境", range: [50, 60], vibe: "你对统一叙事高度认同，表达意愿强，也愿意主动为这套观点辩护。", keywords: ["高认同", "表达强烈", "立场鲜明"], color: "#234778" }
 ];
+
+const runtimeConfig = window.QUIZ_CONFIG || {};
+const SHEETS_ENDPOINT = runtimeConfig.sheetsEndpoint || "";
+const STATS_PAGE_URL = runtimeConfig.statsPageUrl || "./stats.html";
 
 const state = {
   started: false,
@@ -266,6 +180,76 @@ function escapeHtml(value) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#39;");
+}
+
+function getVisitorId() {
+  const key = "quiz_visitor_id";
+  const existing = localStorage.getItem(key);
+  if (existing) return existing;
+  const created = `v_${Date.now()}_${Math.random().toString(36).slice(2, 10)}`;
+  localStorage.setItem(key, created);
+  return created;
+}
+
+function getUtmParams() {
+  const params = new URLSearchParams(window.location.search);
+  return {
+    utm_source: params.get("utm_source") || "",
+    utm_medium: params.get("utm_medium") || "",
+    utm_campaign: params.get("utm_campaign") || ""
+  };
+}
+
+function buildStatsPayload() {
+  const utm = getUtmParams();
+  return {
+    result_key: state.result.key,
+    result_title: state.result.title,
+    result_subtitle: state.result.subtitle,
+    result_rank: state.result.rank,
+    score: state.totalScore,
+    normalized_score: state.resultMeta.normalized,
+    tendency: state.resultMeta.tendency,
+    visitor_id: getVisitorId(),
+    user_agent: navigator.userAgent,
+    page_url: window.location.href,
+    referrer: document.referrer || "",
+    ...utm
+  };
+}
+
+function getReportFingerprint(payload) {
+  return `${payload.visitor_id}:${payload.result_key}:${payload.score}`;
+}
+
+async function reportResult() {
+  if (!SHEETS_ENDPOINT) return false;
+  const payload = buildStatsPayload();
+  const fingerprint = getReportFingerprint(payload);
+  const reportedKey = "quiz_last_report";
+
+  if (sessionStorage.getItem(reportedKey) === fingerprint) {
+    return true;
+  }
+
+  const body = new URLSearchParams({
+    action: "submit",
+    payload: JSON.stringify(payload)
+  });
+
+  try {
+    await fetch(SHEETS_ENDPOINT, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
+      body
+    });
+    sessionStorage.setItem(reportedKey, fingerprint);
+    return true;
+  } catch (error) {
+    console.warn("Result reporting failed", error);
+    return false;
+  }
 }
 
 function renderHome() {
@@ -374,6 +358,7 @@ function renderResult() {
     </section>
     <div class="footer-actions">
       <button class="btn" data-action="share">复制分享文案</button>
+      <button class="btn-secondary" data-action="stats">查看结果分布</button>
       <button class="btn-secondary" data-action="restart">换个状态再测一次</button>
     </div>
     <div class="micro-tip">如果你要发 Facebook 或 LINE，优先发网页链接，卡片封面会更完整。</div>
@@ -410,6 +395,7 @@ function answer(score) {
     state.resultMeta = getResultMeta(state.totalScore);
     state.completed = true;
     render();
+    void reportResult();
     return;
   }
   state.currentIndex = nextIndex;
@@ -433,6 +419,10 @@ function restart() {
   render();
 }
 
+function openStatsPage() {
+  window.open(STATS_PAGE_URL, "_blank", "noopener");
+}
+
 async function copyShareText() {
   const text = decodeURIComponent(app.dataset.shareText || "");
   try {
@@ -452,6 +442,7 @@ app.addEventListener("click", (event) => {
   if (action === "back") goBack();
   if (action === "restart") restart();
   if (action === "share") copyShareText();
+  if (action === "stats") openStatsPage();
 });
 
 render();

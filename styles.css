@@ -489,6 +489,77 @@ body {
   margin-top: 18px;
 }
 
+.stats-page {
+  min-height: calc(100vh - 32px);
+}
+
+.stats-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.stats-small {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.stats-list {
+  margin-top: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: 42px 1fr auto;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 20px;
+  background: rgba(255, 252, 246, 0.9);
+  border: 1px solid rgba(131, 105, 64, 0.08);
+}
+
+.stats-rank {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(200, 161, 95, 0.16);
+  color: #755725;
+  font-weight: 800;
+}
+
+.stats-title {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.stats-subtitle {
+  margin-top: 4px;
+  color: #7f705a;
+  font-size: 14px;
+}
+
+.stats-value {
+  text-align: right;
+}
+
+.stats-count {
+  font-size: 26px;
+  font-weight: 900;
+}
+
+.stats-percent {
+  margin-top: 4px;
+  color: #7f705a;
+  font-size: 13px;
+}
+
 .micro-tip {
   margin-top: 16px;
   font-size: 13px;
@@ -528,8 +599,17 @@ body {
   }
 
   .result-topline,
-  .poster-foot {
+  .poster-foot,
+  .stats-row {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .stats-row {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-value {
+    text-align: left;
   }
 }
