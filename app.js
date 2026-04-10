@@ -273,7 +273,7 @@ function renderHome() {
     <div class="nav">Jianghu Identity Scroll</div>
     <div class="eyebrow">新派武侠快测版</div>
     <h1 class="headline">测测你在这卷江湖里，究竟是哪一门路数</h1>
-    <p class="subhead">外壳是年轻化武侠，内里还是身份认同光谱。结果会同时给你一个江湖称号，以及一眼看懂的现实向度说明。</p>
+    <p class="subhead">12题走完一卷江湖问心路，看看你最后会落在哪一路门派名号。</p>
     <div class="grid">
       <div class="stat-card">
         <div class="stat-label">江湖试卷</div>
