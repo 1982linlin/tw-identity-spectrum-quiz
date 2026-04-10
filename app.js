@@ -222,6 +222,64 @@ function getReportFingerprint(payload) {
   return `${payload.visitor_id}:${payload.result_key}:${payload.score}`;
 }
 
+function submitWithHiddenForm(payload) {
+  return new Promise((resolve, reject) => {
+    const frameName = `quiz-report-frame-${Date.now()}`;
+    const iframe = document.createElement("iframe");
+    iframe.name = frameName;
+    iframe.style.display = "none";
+
+    const form = document.createElement("form");
+    form.method = "POST";
+    form.action = SHEETS_ENDPOINT;
+    form.target = frameName;
+    form.style.display = "none";
+
+    const actionInput = document.createElement("input");
+    actionInput.type = "hidden";
+    actionInput.name = "action";
+    actionInput.value = "submit";
+
+    const payloadInput = document.createElement("input");
+    payloadInput.type = "hidden";
+    payloadInput.name = "payload";
+    payloadInput.value = JSON.stringify(payload);
+
+    form.append(actionInput, payloadInput);
+    document.body.append(iframe, form);
+
+    let settled = false;
+    const cleanup = () => {
+      window.clearTimeout(timeoutId);
+      iframe.remove();
+      form.remove();
+    };
+
+    const timeoutId = window.setTimeout(() => {
+      if (settled) return;
+      settled = true;
+      cleanup();
+      reject(new Error("Timed out while reporting result"));
+    }, 8000);
+
+    iframe.addEventListener("load", () => {
+      if (settled) return;
+      settled = true;
+      cleanup();
+      resolve(true);
+    });
+
+    try {
+      form.submit();
+    } catch (error) {
+      if (settled) return;
+      settled = true;
+      cleanup();
+      reject(error);
+    }
+  });
+}
+
 async function reportResult() {
   if (!SHEETS_ENDPOINT) return false;
   const payload = buildStatsPayload();
@@ -232,18 +290,8 @@ async function reportResult() {
     return true;
   }
 
-  const body = new URLSearchParams({
-    action: "submit",
-    payload: JSON.stringify(payload)
-  });
-
   try {
-    await fetch(SHEETS_ENDPOINT, {
-      method: "POST",
-      mode: "no-cors",
-      headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
-      body
-    });
+    await submitWithHiddenForm(payload);
     sessionStorage.setItem(reportedKey, fingerprint);
     return true;
   } catch (error) {
